@@ -1,6 +1,6 @@
 import ExchangeRate from "./ExchangeRate";
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useState } from "react";
 
 function CurrencyConverter() {
   const currencies = ["BTC", "USD", "LTC", "XRP", "ETH"];
@@ -10,14 +10,10 @@ function CurrencyConverter() {
   var [result, setResult] = useState(0);
 
   const [value, setValue] = useState(1);
-  const [value_sec, setValue_sec] = useState();
 
   function primary_value(event) {
     setValue(event.target.value);
     console.log(value);
-  }
-  function secondary_value(event) {
-    setValue_sec(event.target.value);
   }
 
   function primary_state(event) {
