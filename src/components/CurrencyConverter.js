@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 
 function CurrencyConverter() {
-  const currencies = ["BTC", "USD", "LTC", "XRP", "ETH"];
+  const currencies = ["BTC", "USD", "LTC", "XRP", "ETH", "INR"];
   const [currency, setCurrency] = useState("BTC");
   const [currency_sec, setCurrency_sec] = useState("BTC");
   var [exchangerate, setExchangeRate] = useState(0);
@@ -50,8 +50,8 @@ function CurrencyConverter() {
         // console.log(
         //   response.data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]
         // );
-        console.log(exchangerate);
-        console.log(parseInt(exchangerate) * parseInt(value));
+        //  console.log(exchangerate);
+        //   console.log(parseInt(exchangerate) * parseInt(value));
         setResult(parseInt(exchangerate) * parseInt(value));
       })
       .catch(function (error) {
@@ -103,7 +103,11 @@ function CurrencyConverter() {
       </button>
 
       <div>
-        <ExchangeRate />
+        <ExchangeRate
+          rate={exchangerate}
+          primaryCurrency={currency}
+          secondaryCurrency={currency_sec}
+        />
       </div>
     </div>
   );
