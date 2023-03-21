@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="app">
       <CurrencyConverter />
+      <div>ggsg</div>
       <NewsFeed />
     </div>
   );
