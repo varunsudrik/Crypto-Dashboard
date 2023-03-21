@@ -1,17 +1,13 @@
-import './App.css';
-import NewsFeed from "./components/NewsFeed"
-import CurrencyConverter from "./components/CurrencyConverter"
-import ExchangeRate from "./components/ExchangeRate";
-
+import "./App.css";
+import NewsFeed from "./components/NewsFeed";
+import CurrencyConverter from "./components/CurrencyConverter";
 
 function App() {
   return (
-      <div className='app'>
-          <CurrencyConverter />
-          <NewsFeed />
-
-      </div>
-
+    <div className="app">
+      <CurrencyConverter />
+      <NewsFeed />
+    </div>
   );
 }
 
